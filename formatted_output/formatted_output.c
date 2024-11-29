@@ -3,7 +3,8 @@
 /*
    Prints different datatypes to the standard out (console) formatted
 */
-int main() {
+int main()
+{
     // declare variables
     int format_int = 42;
     float format_float = 3.14;
