@@ -32,12 +32,11 @@ int main()
 
     // Output result
     printf(
-        "\nYou entered:\nInteger: %d\nFloat: %f\nCharacter: %c\nDouble %lf\n", 
-        int_user_input, 
-        float_user_input, 
-        char_user_input, 
-        double_user_input
-    );
+        "\nYou entered:\nInteger: %d\nFloat: %f\nCharacter: %c\nDouble %lf\n",
+        int_user_input,
+        float_user_input,
+        char_user_input,
+        double_user_input);
 
     return 0;
 }
