@@ -1,11 +1,15 @@
 #include "stdio.h"
 #include <stdlib.h>
 
+// Implemented below main function
 int sum_array(int *array, int array_size);
 
+/*
+    This program illustrates simple memoery allocation, reallocation and free'ing
+*/
 int main()
 {
-
+    // Get user input for array size
     printf("Enter the number of elements: ");
     int array_size;
     scanf("%d", &array_size);
@@ -16,7 +20,7 @@ int main()
         return 1;
     }
 
-    // Dynamic memory allocation
+    // Dynamic memory allocation for array
     int *int_array = malloc(array_size * sizeof(int));
 
     if (int_array == NULL)
@@ -25,6 +29,7 @@ int main()
         return 1;
     }
 
+    // Get user input for array elements
     printf("Enter %d elements: ", array_size);
 
     for (int i = 0; i < array_size; i++)
@@ -35,8 +40,9 @@ int main()
     int sum = sum_array(int_array, array_size);
 
     printf("Sum of the elements: %d\n\n", sum);
-    
+
     // Increase allocated array size by 2
+    // repeat previous process with extended array
     int increased_size = 2;
     int new_array_size = array_size + increased_size;
     printf("Increasing array size...\n");
@@ -64,9 +70,11 @@ int main()
     return 0;
 }
 
-int sum_array(int *array, int array_size) {
+int sum_array(int *array, int array_size)
+{
     int sum = 0;
-    for(int i = 0; i < array_size; i++) {
+    for (int i = 0; i < array_size; i++)
+    {
         sum += array[i];
     }
     return sum;
