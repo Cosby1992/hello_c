@@ -1,5 +1,9 @@
 #include "stdio.h"
 
+/*
+    This program show a simple pointer example, printing out
+    adresses and values to help understand what is happening
+*/
 int main() {
 
     int number = 42;
